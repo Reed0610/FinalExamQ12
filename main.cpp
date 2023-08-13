@@ -28,9 +28,9 @@ int main() {
         acc_gyro.get_x_axes(axes);
 
         // Map accelerometer data to LED brightness range
-        float redBrightness = mapValue(static_cast<float>(axes[0]), -2000.0, 2000.0, 0.01, 0.99);
-        float greenBrightness = mapValue(static_cast<float>(axes[1]), -2000.0, 2000.0, 0.01, 0.99);
-        float blueBrightness = mapValue(static_cast<float>(axes[2]), -2000.0, 2000.0, 0.01, 0.99);
+        float redBrightness = mapValue(static_cast<float>(axes[0]), -100.0, 100.0, 0.99, 0.10);
+        float greenBrightness = mapValue(static_cast<float>(axes[1]), -100.0, 100.0, 0.99, 0.10);
+        float blueBrightness = mapValue(static_cast<float>(axes[2]), -400.0, 1000.0, 0.99, 0.10);
 
         // Print accelerometer data and calculated brightness values
         printf("Acc X: %d, Acc Y: %d, Acc Z: %d\r\n", axes[0], axes[1], axes[2]);
